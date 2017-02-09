@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Web components</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+</head>
+<body>
+
+<hello-world nombre="'Uriel'" apellido="'Miranda'"></hello-world>
+
+
+<hello-world nombre="'Josue'"></hello-world>
+
+
+
+
+<section ng-controller="secondCtrl as two">
+    {{two.despedida}}
+</section>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/components/hello.component.js"></script>
+
+</body>
+</html>
