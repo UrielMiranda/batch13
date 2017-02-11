@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module("starApp",["ngResource"]);
+        .module("starApp",["ngResource","ngRoute"]);
 
 })();
 

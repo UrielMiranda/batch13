@@ -1,4 +1,3 @@
-//http://swapi.co/api/
 (function(){
     'use strict';
 
@@ -9,7 +8,7 @@
     // injectar dependencia
     starApi.$inject = ["$resource"];
     function starApi($resource){
-        return $resource('http://swapi.co/api/people/1');
+        return $resource('http://swapi.co/api/:category/:id');
 
     }
 

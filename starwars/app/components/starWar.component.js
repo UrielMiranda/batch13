@@ -4,6 +4,9 @@
     //Object
 
     var starWars = {
+        bindings:{
+            category:"="
+        },
         templateUrl: './app/components/starWars.component.html',
         controller: starCtrl
     };
@@ -16,14 +19,24 @@
     function starCtrl(starApi){
         var star = this;
 
-        star.people = null;
-        star.data = starApi.get()
-                    .$promise
-                    .then(
-                        function(response){
-                        console.log(response);
-                        star.people = response;
-        });
+        star.$onInit = onInit;
+        star.$onDestroy = onDestroy;
+
+        function onInit() {
+            star.characters = null;
+            star.apiData = starApi.get(
+                {category : star.category})
+                .$promise
+                .then(function(response){
+                        star.characters = response.results;
+                    });
+        }
+
+        function onDestroy() {
+            console.log("chauuu");
+        }
+
+
     }
 
 })();

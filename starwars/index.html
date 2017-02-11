@@ -6,15 +6,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <base href="/">
 </head>
 <body>
 
-<star-wars></star-wars>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/people">People</a></li>
+            <li><a href="/planets">Planets</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main ng-view></main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
 <script src="app/app.module.js"></script>
 <script src="app/components/starWar.component.js"></script>
+<script src="app/components/hello.component.js"></script>
 <script src="app/factories/starWars.factory.js"></script>
+<script src="app/routes/routes.js"></script>
 </body>
 </html>

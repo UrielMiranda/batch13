@@ -1,0 +1,16 @@
+<section class="container">
+   <div class="row">
+       col-md-4
+       col m4
+       <div class="col s4 m4 l4" ng-repeat="char in $ctrl.characters">
+           <div class="card">
+               <div class="card-image">
+                   <img ng-class="activator"ng-src="{{char.thumbnail.path}}.{{char.thumbnail.extension}}" alt="">
+                   <div class="card-action">
+                       <p><a href="#">{{char.name}}</a></p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
