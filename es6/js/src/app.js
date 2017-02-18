@@ -1,12 +1,13 @@
-let hola = "hello";
-console.log(hola);
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify');
 
-function promedio(...numeros){
-    const suma = numeros.reduce(function(acc,value){
-        return acc + value;
-    }, 0);
-    console.log(suma/numeros.length);
-    return suma / numeros.length;
+gulp.task('ugli',['demo'],function(){
+    gulp.src('js/src/*.js')
+        .pipe(concat('build.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js/build'));
+})
 
-}
-promedio(9,10,7,5);
+gulp.task('demo');
+
